@@ -3,7 +3,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Calibri', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Calibri', Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
+    font-size: large;
     scroll-behavior: smooth;
     color: black;
 }
@@ -26,6 +27,30 @@
     appear in front of any content when scrolling */
 }
 
+.navbar__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar__link {
+    color: black;
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+    width: 125px;
+    font-size: 18px;
+    text-decoration: none;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.navbar__item:hover {
+    /* color: white; */
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+
 #logo {
     color: black;
     display: flex;
@@ -39,10 +64,11 @@
 
 #logo:hover {
     color: rgb(196, 220, 156);
+    /* color: rgb(117, 142, 125); */
+
     transition: all 0.3s ease;
     font-style: italic;
 }
-
 
 .main {
     background: white;
@@ -57,4 +83,17 @@
     height: 90%;
     text-align: left;
     padding: 30px; 
+}
+
+.main a:hover {
+    color: rgb(63, 95, 73);
+}
+
+.main blockquote {
+    background: rgb(196, 212, 188);
+    padding: 5px;
+    margin-left: 40px;
+    margin-right: 650px;
+    border-radius: 25px;
+    padding: 20px 45px;
 }
