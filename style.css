@@ -64,10 +64,11 @@
 
 #logo:hover {
     color: rgb(196, 220, 156);
-    /* color: rgb(117, 142, 125); */
 
     transition: all 0.3s ease;
+    /* font-size: 1.6rem; */
     font-style: italic;
+    text-decoration: underline;
 }
 
 .main {
@@ -110,6 +111,7 @@
 
 .main ::selection {
     color: white;
+    /* background-color: rgb(98, 160, 119); */
     background-color: rgb(115, 163, 131);
 }
 
