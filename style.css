@@ -76,7 +76,9 @@
     /* color:black; */
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: center;
+    /* i really don't have any understand of what a flexbox really is at this moment */
+    /* but I will learn after this commit */
     align-items: left;
     max-width: 1650px;
     margin: 0 auto;
