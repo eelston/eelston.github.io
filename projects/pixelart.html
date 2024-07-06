@@ -38,14 +38,45 @@
                 <li>KIM-1 Clone (from <a href="https://www.corshamtech.com/product/kim-clone/">Corsham Technologies</a>, no longer sold)</li>
                 <li>DotStar 8x8 LED Grid (from <a href="https://www.adafruit.com/product/3444">Adafruit</a>)</li>
                 <li>Breadboard</li>
-                <li>Online assembly language to hex compiler (<a href="https://www.asm80.com/">asm80.com</a>)</li>
+                <li>Online 6502 assembly language to hex compiler (<a href="https://www.asm80.com/">asm80.com</a>)</li>
             </ul>
         </div>
         
         <div class="blog">
-            <h2>Background</h2>
+            <h2>Background and Project Summary</h2>
+            <p>
+                In Spring 2023, I took 198DP, a weekly 3 hour hands-on electronics lab centered around working with the KIM-1 single-board computer.
+                The course aimed to help freshman and sophomore ECE majors grow familiar with reading datasheets, assembly language programming, and basic circuit theory.
+                Throughout the semester, we worked with various LEDs, integrated circuits, and other electronic components.
+                <br><br>
+                The final 3 or 4 class meetings focused on allowing us to develop individual projects involving the KIM-1 and any choice of sound, light, and/or mechanical components.
+                Some of my peers created games or music-based projects! My project primarily involved an 8x8 LED grid and the keyboard of the KIM-1.
+                <br><br>
+                After drafting designs corresponding to each key A-F and determining the order in which to send in the LED data (the DotStar takes in data serially--or a pixel at a time),
+                I first tested various color combinations on a 1-2 rows of each pattern and reworked the RGB and brightness values as needed.
+                To cut down on testing time, I wrote a quick Python script that took a text file with colors written in plain text and produced the appropriate assembly language instructions
+                for each LED, allowing me to adjust and test the look of different RGB values quickly. 
+                <br><br>
+                When I moved on to testing the 8x8 patterns in full, only about half of my patterns were showing up on the grid and
+                I realized the initial memory location I was loading the LED instructions to didn't have enough space for all 256 bytes of information.
+                Luckily, the KIM-1 clone by Corsham actually included additional RAM ("RAM from 2000 to FFF7. The KIM-1 had nothing past 1FFF") and I was able to adjust the start address easily and avoid any additional memory-related issues.
+                <br><br>
+                Some additional details are included in the presentation attached below. While not super complicated, this project and the course as a whole introduced me to a lot of fundamental skills
+                that I've found useful in other classes since. I appreciated being given room for creativity and problem solving, while being encouraged to ask questions and learn from mistakes.
+                This course inspired me to propose the creation of an additional experiential learning course focusing giving students the opportunity to work on a semester long project with regular instructor guidance,
+                as a sort of stepping stone between 197DP and the junior & senior design projects. 
+                <br><br>
+            </p>
+            <object class="pdf" data="../assets/Elston Circuits and Code 2023.pdf"
+            width="800" height="500"></object>
             <!-- <p>In Spring 2023, I took 197DP, an ECE course for hands-on experience which was described as follows:<br><br></p>
         
+            <object class="pdf" 
+            data=
+"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf"
+            width="800"
+            height="500">
+    </object>
             <blockquote>
                 <ul>
                     <li>Weekly hands-on electronics lab with term project. Weekly three-hour scheduled lab.</li>
@@ -62,7 +93,7 @@
                 <a href="https://www.corshamtech.com/product/kim-clone/">KIM-1 clone</a>,
                 a board developed by Corsham Technologies replicating the <a href="https://en.wikipedia.org/wiki/KIM-1">MOS Technology 6502 single-board computer</a>. -->
                 <br>
-                WIP, come back soon!
+                <!-- WIP, come back soon! -->
             </p>
         </div>
     </div>
