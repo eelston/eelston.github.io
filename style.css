@@ -57,6 +57,12 @@
     text-decoration: underline;
 }
 
+.navbar ::selection {
+    color: rgb(90, 135, 105);
+    /* color: rgb(115, 163, 131); */
+    background-color: white;
+}
+
 #logo {
     color: black;
     display: flex;
