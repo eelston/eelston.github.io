@@ -124,6 +124,20 @@
     padding: 20px; 
 }
 
+.silly {
+}
+
+.silly li::marker {
+    color:rgb(56, 100, 70)
+}
+
+.silly ul {
+    margin-left: 40px;
+    /* color:rgb(93, 96, 91); */
+    /* font-size: smaller; */
+    /* font-style: italic; */
+}
+
 .error h1 {
     font-size: 3rem;
 }
