@@ -204,7 +204,7 @@
 .item__label {
     display: flex;
     flex-direction: row;
-    width: 600px;
+    width: 650px;
     min-width: 300px;
     justify-content: space-between;
     /* max-width: 500px; */
