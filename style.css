@@ -187,7 +187,7 @@
 
 /* TODO: widen list a tiny bit so dates aren't overlapping with blurb as much */
 .projects__list {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -195,28 +195,32 @@
     max-width: 650px;
     height: 90%;
     text-align: left;
+    font-size: 1.2rem;
+
 }
 
 .project__item {
-    margin: 10px 50px;
+    margin: 15px 50px;
+    width: 90%
 }
 
 .item__label {
     display: flex;
     flex-direction: row;
-    width: 650px;
+    /* width: 650px; */
     min-width: 300px;
     justify-content: space-between;
     /* max-width: 500px; */
 }
 
 .date {
-    color:rgb(128, 130, 128)
+    color:rgb(128, 130, 128);
+    margin-right: 10px;
 }
 
 .title {
     color: rgb(56, 100, 70);
-    font-size: 1.15rem;
+    /* font-size: 1.15rem; */
     text-decoration: none;
     /* font-weight: lighter; */
 }
@@ -226,11 +230,35 @@
 }
 
 .blurb {
+    font-size: smaller;
     /* font-style: italic; */
+    /* margin-right: 10px; */
+}
+
+@media screen and (max-width: 650px) {
+    .item__label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title {
+        max-width: 80vw;
+    }
+    
+    .date {
+        font-size: 1.1rem;
+        max-width: 80vw;
+    }
+
+    .blurb {
+        max-width: 80vw
+        /* 80% view width */
+    }
 }
 
 .links {
     margin-top: 20px;
+    font-size: smaller;
 }
 
 .links a {
