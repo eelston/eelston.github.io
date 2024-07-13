@@ -2,6 +2,7 @@ This website currently serves as a small portfolio, holding a couple projects an
 
 
 TODO:
+- redo the div stuff
 - default link color
 - change project list div to main?
 - get text centered for mobile screens
