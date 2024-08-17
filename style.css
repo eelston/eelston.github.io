@@ -1,270 +1,246 @@
+:root {
+    --green1: #73a383;
+    --green2: #82ad90;
+    --green3: #92b79d;
+    --green4: #a1c1ab;
+    --green5: #b0cbb8;
+    --green6: rgb(63, 95, 73);
+
+    --dark1: #121212;
+    --dark2: #282828;
+    --dark3: #3f3f3f;
+    --dark4: #575759; 
+    --dark5: #717171;
+    --dark6: #8b8b8b;
+
+    --light1: #fbfbfe;
+    --light2: #e5e5e5;
+    /* --light3: rgb(214, 214, 214); */
+    --light3: #c4c4c4;
+
+}
+
 * {
     /* asterisk selects all elements */
-    box-sizing: border-box;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    font-family: 'Calibri', Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
-    /* font-size: large; */
-    scroll-behavior: smooth;
-    /* color: black; */
+    line-height: 1.6;
+    color-scheme: light dark;
+    /* color scheme will adapt to user pref */
 }
 
-/* background: rgb(146, 180, 156); */
+body {
+    box-sizing: border-box;
+    /* content-box - border + padding adds to size
+        border-box - content shrinks to fit size */
 
-
-.navbar {
-    background: rgb(117, 142, 125);
-    height: 50px;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    padding: 0 25px;
-    /* navbar will stay at top of page and
-    appear in front of any content when scrolling */
+    font-family:'Noto Sans', 'Open Sans', 'Inter', Consolas, serif;
+    font-size: 100%;
+    text-rendering: optimizeLegibility;
+    background: light-dark(var(--light1), var(--dark2));
 }
 
-.navbar__container {
+/* header, navbar */
+header {
     display: flex;
-    /* justify-content: flex-end; */
-    /* margin: 0 auto; */
-    /* margin-left: 1000px; */
-}
-
-
-.navbar__menu {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-.navbar__link {
-    color: black;
-    display: flex;
-    align-items:  center;
+    background: light-dark(var(--green1), var(--dark1));
+    height: 3em;
     justify-content: center;
-    width: 125px;
-    font-size: 18px;
-    text-decoration: none;
-    height: 100%;
+    align-items: center;
 }
 
-.navbar__item:hover {
-    /* color: white; */
-    text-decoration: underline;
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
 }
 
-.navbar ::selection {
-    color: rgb(90, 135, 105);
-    /* color: rgb(115, 163, 131); */
-    background-color: white;
+header ::selection {
+    background-color: light-dark(var(--green5), var(--green1));
 }
 
 #logo {
-    color: black;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    text-decoration: none;
+    color: light-dark(black, var(--light1));
     font-weight: bold;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1.25em;
 }
 
 #logo:hover {
-    /* color: rgb(212, 255, 142); */
-    color: rgb(196, 220, 156);
-
-    transition: all 0.3s ease;
-    /* font-size: 1.6rem; */
-    /* font-style: italic; */
+    color: light-dark(black, var(--green1));
     text-decoration: underline;
-    /* text-decoration-color: black; */
 }
 
-.main {
-    background: white;
-    /* color:black; */
+nav {
+    color: light-dark(black, var(--light1));
+}
+
+nav a {
+    color: light-dark(black, var(--light1));
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: light-dark(black, var(--green2));
+    text-decoration: underline;
+}
+
+/* main site content */
+main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    /* i really don't have any understand of what a flexbox really is at this moment */
-    /* but I will learn after this commit */
-    align-items: left;
-    max-width: 1000px;
-    margin: 0 0 0 40px;
-    /* margin: 0 auto; */
-    height: 90%;
-    text-align: left;
-    padding: 20px;
-    font-size: 1.2rem;
-    /* font: Verdana */
-}
+    width: 800px;
 
-.main h3 {
-    color: rgb(56, 100, 70);
-    font-size: 1.75rem;
-    /* text-decoration: none; */
-    font-weight: normal;
-}
-
-.error {
-    background: white;
-    /* color:black; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 1650px;
-    margin: 0 auto;
-    height: 90%;
-    padding: 20px; 
-}
-
-.silly {
-}
-
-.silly li::marker {
-    color:rgb(56, 100, 70)
-}
-
-.silly ul {
-    margin-left: 40px;
-    /* color:rgb(93, 96, 91); */
-    /* font-size: smaller; */
-    /* font-style: italic; */
-}
-
-.error h1 {
-    font-size: 3rem;
-}
-
-.info {
-    margin-bottom: 5px;
-}
-
-.ingredients ul {
-    margin-left: 40px;
-    margin-bottom: 15px;
-}
-
-.blog {
-    /* display: grid;
-    grid-template-columns: fit-content(300px) fit-content(300) lfr; */
-    
-    
-}
-
-.main a:hover {
-    color: rgb(63, 95, 73);
-}
-
-.main a:visited {
-    color: rgb(56, 100, 70)
-}
-
-.main ::selection {
-    color: white;
-    /* background-color: rgb(98, 160, 119); */
-    background-color: rgb(115, 163, 131);
-}
-
-.main blockquote {
-    background: rgb(196, 212, 188);
-    /* padding: 5px; */
-    max-width: 1000px;
-    margin-left: 40px;
-    /* margin-right: 500px; */
-    /* margin creates extra space around an element */
-    border-radius: 25px;
-    padding: 20px 10px 20px 45px;
+    margin: 1rem auto;
     /* top right bottom left */
-    /* padding creates extra space within an element */
+
+    color: light-dark(black, var(--light1));
 }
 
-/* TODO: widen list a tiny bit so dates aren't overlapping with blurb as much */
-.projects__list {
-    margin-top: 10px;
+main ::selection {
+    color: var(--light1);
+    background-color: var(--green1);
+}
+
+p {
+    margin: 0 0 1em;
+    /* top right bottom left */
+}
+
+#page-home {
+    /* width: 800px; */
+    /* margin: 1rem auto 0; */
+}
+
+#page-project-writeup {
+    /* width: 800px; */
+    /* margin: 1rem auto 10em; */
+    margin-bottom: 10em;
+}
+
+#page-project-writeup img {
+    display: block;
+    max-width: 620px; 
+    margin: 1rem auto;
+    border: 11px solid light-dark(var(--light2), var(--dark4));
+    
+}
+
+#page-project-directory {
+    font-size: 1.1em;
+   
+}
+
+.project-item {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
-    max-width: 650px;
-    height: 90%;
-    text-align: left;
-    font-size: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.project-name {
+}
+
+ol.directory {
+    list-style-type: none;
+}
+
+ol.directory li.item {
+    margin-bottom: 1em;
+}
+
+ol.directory p.date {
+    margin: 0;
+    float: right;
+}
+
+ol.directory p.summary {
 
 }
 
-.project__item {
-    margin: 15px 50px;
-    width: 90%
+ul {
+    padding-left: 2em;
 }
 
-.item__label {
-    display: flex;
-    flex-direction: row;
-    /* width: 650px; */
-    min-width: 300px;
-    justify-content: space-between;
-    /* max-width: 500px; */
+.tags {
+    font-size: 0.9em;
+    color: light-dark(var(--dark4), var(--light3));
 }
 
 .date {
-    color:rgb(128, 130, 128);
-    margin-right: 10px;
+    color: var(--dark6);
+    /* font-size: 14px; */
+    font-size: 0.9em;
 }
 
-.title {
-    color: rgb(56, 100, 70);
-    /* font-size: 1.15rem; */
+/* footer */
+footer {
+    margin-bottom: 1em;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+#footer-home {
+    text-align: left;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: light-dark(var(--green6), var(--green1));
     text-decoration: none;
-    /* font-weight: lighter; */
 }
 
-.title:hover {
+footer a:hover {
     text-decoration: underline;
 }
 
-.blurb {
-    font-size: smaller;
-    /* font-style: italic; */
-    /* margin-right: 10px; */
+footer a:visited {
+    color: light-dark(var(--green6), var(--green1));
 }
 
-@media screen and (max-width: 650px) {
-    .item__label {
-        display: flex;
-        flex-direction: column;
+/* link behavior */
+main a {
+    color: light-dark(black, var(--light1));
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--green1);
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: light-dark(var(--green6), var(--green1))
+}
+
+
+/* content response to screen size */
+@media screen and (max-width: 820px) {
+    .nav-container {
+        max-width: 90%;
+        min-width: calc(360px * .9);
     }
 
-    .title {
-        max-width: 80vw;
+    #page-project-writeup {
+        max-width: 90%;
+        min-width: calc(360px * .9);
+
+    }   
+}
+
+@media screen and (max-width: 775px) {
+    #page-project-writeup img {
+        max-width: 90%;
+   }
+}
+
+/* @media screen and (max-width:) */
+
+/* @media (prefers-color-scheme: dark) {
+    header {
+        background: #1c1b22;
+        border-bottom: 1px solid;
+        border-color: rgb(228, 228, 228);
     }
-    
-    .date {
-        font-size: 1.1rem;
-        max-width: 80vw;
-    }
-
-    .blurb {
-        max-width: 80vw
-        /* 80% view width */
-    }
-}
-
-.links {
-    margin-top: 20px;
-    font-size: smaller;
-}
-
-.links a {
-    color: rgb(63, 95, 73);
-}
-
-.links a:hover {
-    cursor: pointer
-}
+} */

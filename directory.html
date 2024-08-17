@@ -4,54 +4,49 @@
     <meta charset="UTF-8">
     <title>Projects | Erika Elston</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 </head>
 
 <body>
-    <nav>
-        <!-- contains set of navigation links -->
-         <div class="navbar">
-            <a href="index.html" id="logo">Erika C. Elston</a>
-            <div class="navbar__container">
-                <ul class="navbar__menu">
-                    <li class="navbar__item">
-                        <a href="directory.html" class="navbar__link" id="projects">projects</a>
-                    </li>
-                </ul>
-            </div>
-         </div>
-    </nav>
+    <header>
+        <div class="nav-container">
+            <a id="logo" href="/">Erika Elston</a>
+            <nav>
+                <!-- contains set of navigation links -->
+                <a href="directory.html">projects</a>
+                -
+                <!-- <a href="../blogs.html">blog</a>
+                - -->
+                <a href="links.html">links</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="projects__list">
-        <div class="project__item">
-            <div class="item__label">
-                <a href="projects/pomodoro.html" class="title">Raspberry Pico W Pomodoro Timer</a>
+    <main id="page-project-directory">
+        <ol class="directory">
+            <!-- <li class="item">
+                <a href="projects/pomodoro.html" class="project-name">Raspberry Pico W Pomodoro Timer</a>
                 <p class="date">Fall 2023 - Summer 2024</p>
-            </div>
-            <p class="blurb">Pomodoro technique time management tool with graphic LCD display</p>
-        </div>
+                <p class="summary">Pomodoro technique time management tool with graphic LCD display</p>
+                
+            </li> -->
 
-        <div class="project__item">
-            <div class="item__label">
-                <a href="projects/pixelart.html" class="title">KIM-1 LED Matrix Art</a>
+            <li class="item">
+                <a href="projects/pixelart.html" class="project-name">KIM-1 LED Matrix Art</a>   
                 <p class="date">Spring 2023</p>
-            </div>
-            <p class="blurb">Various pixel art patterns displayed on LED grid with KIM-1 clone</p>
-        </div>
+                <p class="summary">Displaying pixel art patterns displayed on LED grid with KIM-1 clone</p>
+            </li>
+        </ol>
+    </main>
 
-        <!-- <div class="project__item">
-            <div class="item__label">
-                <a href="somewhere.html" class="title">Project Title</a>
-                <p class="date">Month Year</p>
-            </div>
-            <p class="blurb">Project blurb</p>
-        </div> -->
-      
-        <!-- <div class="project__item">
-            <p class="title">Project Title</p>
-            <p>Date Year | Project blurb</p>
-        </div> -->
-    </div>
-    
+    <!-- <footer>
+        <a href="#">Back to top</a> |
+        <a href="https://github.com/eelston" target="_blank" rel="noreferrer noopener">Github</a> |
+        <a href="https://www.linkedin.com/in/erikacelston/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+    </footer> -->
 </body>
 </html>
