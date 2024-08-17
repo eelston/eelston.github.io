@@ -2,8 +2,5 @@ This website currently serves as a small portfolio, holding a couple projects an
 
 
 TODO:
-- redo the div stuff
-- default link color
-- change project list div to main?
-- get text centered for mobile screens
-- project page formatting on mobile (esp title section)
+- finish screen width response for home page and project directory
+- combine repeated css values where needed
