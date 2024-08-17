@@ -2,6 +2,6 @@ This website currently serves as a small portfolio, holding a couple projects an
 
 TODO:
 
-- finish screen width response for home page and project directory
+- ~~finish screen width response for home page and project directory~~
 - combine repeated css values where needed
 - ~~navbar hover color when highlighted~~
