@@ -223,7 +223,7 @@ main a:visited {
         min-width: calc(360px * .9);
     }
 
-    #page-project-writeup {
+    main {
         max-width: 90%;
         min-width: calc(360px * .9);
 
