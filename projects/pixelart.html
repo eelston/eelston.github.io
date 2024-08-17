@@ -2,101 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>KIM-1 Pixel Art Display | Erika Elston</title>
+    <title>KIM-1 LED Matrix Art / Erika Elston</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../style.css">
-    <!-- <base href="eelston.github.io" target="_blank" rel="noreferrer noopener"> -->
-    <!-- I want external links to open in new tab but not nav links.. prob just do manually -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
+    <!-- <a href="link" target="_blank" rel="noreferrer noopener">Link Name</a>-->
+    <!-- I want external links to open in new tab but not site nav links, add to links manually -->
 </head>
 
 <body>
-    <nav>
-        <!-- contains set of navigation links -->
-        <div class="navbar">
-            <a href="../index.html" id="logo">Erika C. Elston</a>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="../directory.html" class="navbar__link" id="projects">projects</a>
-                </li>
-                <!-- <li class="navbar__item">
-                    <a href="something.html" class="navbar__link" id="something">blog</a>
-                </li> -->
-            </ul>
+    <header>
+        <div class="nav-container">
+            <a id="logo" href="/">Erika Elston</a>
+            <nav>
+                <!-- contains set of navigation links -->
+                <a href="../directory.html">projects</a>
+                -
+                <!-- <a href="../blogs.html">blog</a>
+                - -->
+                <a href="../links.html">links</a>
+            </nav>
         </div>
-    </nav>
+    </header>
 
-    <div class="main">
-        <div class="info">
+    <main id="page-project-writeup">
+        <article>
             <h1>KIM-1 LED Matrix Art</h1>
-            <p>E&C-ENG 197DP | Spring 2023 | Python, 6502 assembly language</p>
-            <hr>
-        </div>
-
-        <div class="ingredients">
-            <h2>Components</h2>
-            <ul>
-                <li>KIM-1 Clone (from <a href="https://www.corshamtech.com/product/kim-clone/">Corsham Technologies</a>, no longer sold)</li>
-                <li>DotStar 8x8 LED Grid (from <a href="https://www.adafruit.com/product/3444">Adafruit</a>)</li>
-                <li>Breadboard</li>
-                <li>Online 6502 assembly language to hex compiler (<a href="https://www.asm80.com/">asm80.com</a>)</li>
-            </ul>
-        </div>
-        
-        <div class="blog">
-            <h2>Background and Project Summary</h2>
-            <p>
-                In Spring 2023, I took 198DP, a weekly 3 hour hands-on electronics lab centered around working with the KIM-1 single-board computer.
-                The course aimed to help freshman and sophomore ECE majors grow familiar with reading datasheets, assembly language programming, and basic circuit theory.
-                Throughout the semester, we worked with various LEDs, integrated circuits, and other electronic components.
-                <br><br>
-                The final 3 or 4 class meetings focused on allowing us to develop individual projects involving the KIM-1 and any choice of sound, light, and/or mechanical components.
-                Some of my peers created games or music-based projects! My project primarily involved an 8x8 LED grid and the keyboard of the KIM-1.
-                <br><br>
-                After drafting designs corresponding to each key A-F and determining the order in which to send in the LED data (the DotStar takes in data serially--or a pixel at a time),
-                I first tested various color combinations on a 1-2 rows of each pattern and reworked the RGB and brightness values as needed.
-                To cut down on testing time, I wrote a quick Python script that took a text file with colors written in plain text and produced the appropriate assembly language instructions
-                for each LED, allowing me to adjust and test the look of different RGB values quickly. 
-                <br><br>
-                When I moved on to testing the 8x8 patterns in full, only about half of my patterns were showing up on the grid and
-                I realized the initial memory location I was loading the LED instructions to didn't have enough space for all 256 bytes of information.
-                Luckily, the KIM-1 clone by Corsham actually included additional RAM ("RAM from 2000 to FFF7. The KIM-1 had nothing past 1FFF") and I was able to adjust the start address easily and avoid any additional memory-related issues.
-                <br><br>
-                Some additional details are included in the presentation attached below. While not super complicated, this project and the course as a whole introduced me to a lot of fundamental skills
-                that I've found useful in other classes since. I appreciated being given room for creativity and problem solving, while being encouraged to ask questions and learn from mistakes.
-                This course inspired me to propose the creation of an additional experiential learning course focusing giving students the opportunity to work on a semester long project with regular instructor guidance,
-                as a sort of stepping stone between 197DP and the junior & senior design projects. 
-                <br><br>
-            </p>
-            <object class="pdf" data="../assets/Elston Circuits and Code 2023.pdf"
-            width="800" height="500"></object>
-            <!-- <p>In Spring 2023, I took 197DP, an ECE course for hands-on experience which was described as follows:<br><br></p>
-        
-            <object class="pdf" 
-            data=
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210101201653/PDF.pdf"
-            width="800"
-            height="500">
-    </object>
-            <blockquote>
-                <ul>
-                    <li>Weekly hands-on electronics lab with term project. Weekly three-hour scheduled lab.</li>
-                    <li>Additional two hours of studying/reading/prototyping expected outside of the scheduled lab time.</li>
-                    <li>Electronic circuit schematic diagrams, circuit theory, LEDs, transistors, ICs (integrated circuits) and other electronic components.</li>
-                    <li>Assembly language programming and microprocessor peripherals. </li>
-                    <li>No prior experience with electronic circuits or computer programming required.</li>
-                </ul>
-            </blockquote>
+            <p class="tags">Spring 2023 | E&C-ENG 197DP | Python, 6502 assembly language</p>
             
             <p>
-                <br>
-                Through this course, I was introduced to assembly language and the
-                <a href="https://www.corshamtech.com/product/kim-clone/">KIM-1 clone</a>,
-                a board developed by Corsham Technologies replicating the <a href="https://en.wikipedia.org/wiki/KIM-1">MOS Technology 6502 single-board computer</a>. -->
-                <br>
-                <!-- WIP, come back soon! -->
+                I completed this project as the final task in ECE 197DP—a weekly 3-hour lab/elective centered
+                around the KIM-1 single-board computer. The course aimed to provide a hands-on introduction to
+                fundamental circuit theory and 6502 assembly language. Throughout the semester, we got comfortable
+                reading datasheets and working with various LEDs, integrated circuits, and other electronic components.
+                We presented our individual projects at the 2023 M5 Circuits & Code showcase.
             </p>
-        </div>
-    </div>
-    
+
+            <h2>Components</h2>
+            <ul class="components">
+                <!-- <li>KIM-1 Clone (<a href="https://www.corshamtech.com/product/kim-clone/">Corsham Technologies</a>)</li> -->
+                <li>KIM-1 Clone (<a href="https://web.archive.org/web/20240225082110/https://www.corshamtech.com/product/kim-clone/" target="_blank" rel="noreferrer noopener">Corsham Technologies</a>)</li>
+                <li>DotStar 8x8 LED Grid (<a href="https://www.adafruit.com/product/3444" target="_blank" rel="noreferrer noopener">Adafruit</a>)</li>
+                <li>Breadboard</li>
+                <li>6502 assembly language to hex compiler (<a href="https://www.asm80.com/" target="_blank" rel="noreferrer noopener">asm80.com</a>)</li>
+            </ul>
+            
+            <br>
+
+            <img src="../media/projects/pixelart/2023-may-c&c-page1-erika-elston.png"
+            alt="Page 1 of Circuits & Code demo board. Includes a picture of the KIM-1 and the Adafruit 8x8 LED grid fully illuminated with a blue B. Close-up shots of the blue B and apple pattern on the grid are attached below. A portrait of me, Erika, outside in front of trees is included to the right."
+            title="KIM-1 and Adafruit 8x8 LED grid with the B pattern. Close-up shots of the B and A patterns."
+            >
+            
+            <p>
+               After settling on the Adafruit 8x8 LED grid as the main project component, I drafted six tentative designs to map to keys A through
+               F on the KIM-1's keyboard. I wanted to create something that could serve as a desk accessory, similar to <a href="https://divoom.com/products/divoom-timebox-evo" target="_blank" rel="noreferrer noopener">Divoom's pixel art speakers</a>.
+            </p>
+
+            <img src="../media/projects/pixelart/2023-may-c&c-page4-erika-elston.png"
+            alt="Page 4 of Circuits & Code demo board. Includes screenshots of the Python automation script used to convert pixel art patterns from plain text to assembly code, with an example text file and the resulting output. There is also a screenshot of structure of the project's main assembly program, as well as the first drafts of each pixel art pattern in their initial color schemes. From left to right, top to bottom: an apple, the letter B, a cat, the letter D, an envelope, and the letter F."
+            title="Python automation script to convert pixel art patterns from plain text to assembly code, example text file of colors and resulting assembly code, and structure of main project program. In the top right, first drafts of each pixel art pattern and initially proposed color schemes. From left to right, top to bottom: an apple, the letter B, a cat, the letter D, an envelope, and the letter F."
+            >
+
+            <p>
+                I tested various color combinations on the DotStar with the first 1-2 rows of each pattern, reworking the RGB and brightness values as needed.
+                To cut down on testing time, I wrote a short Python script that took a text file with colors written in plain text and produced the appropriate assembly language instructions
+                for each LED, allowing me to test and adjust different RGB values quickly. This saved a substantial amount of time, as the information for a single pixel involves 4 separate hex values
+                and I was frequently adjusting the values for all 16 (and eventually 64) pixels at a time.
+            </p>
+
+            <p>
+                When I moved on to testing the 8x8 patterns in full, only about half of my patterns were showing up on the DotStar, with the rest of the grid remaining off.
+                I eventually realized that the initial memory location I was loading the LED instructions to didn't have enough space for all 256 bytes of information.
+                Luckily, the KIM-1 clone by Corsham actually included additional RAM ("RAM from 2000 to FFF7. The KIM-1 had nothing past 1FFF") and I was able to easily adjust the start address to avoid any additional memory-related issues.
+            </p>
+
+            <p>
+                Some additional details are included in the slides below. While not very complicated, this project and the course introduced me to many fundamental skills
+                that I've found useful in other classes since. I appreciated being given room for creativity and problem solving, while being encouraged to ask questions and learn from my mistakes.
+                This course inspired me to propose the creation of an additional experiential learning course focused on providing students with the opportunity to work on a semester long project with regular instructor guidance,
+                as a stepping stone between 197DP and the junior & senior design projects. 
+            </p>
+
+            <img src="../media/projects/pixelart/2023-may-c&c-page2-erika-elston.png"
+            alt="Page 2 of Circuits & Code demo board. Includes a project block diagram. KIM-1 communicates with 6502 RAM-I/O-Timer, which in turn outputs to the Adafruit DotStar via the ClockIn and DataIn ports. The ground and +5V power connections are mistakenly omitted. Close-up shots of the E and F patterns are positioned in the bottom left and top right, respectively."
+            title="Project block diagram and explanation. The DotStar should also be connected to ground and +5V power, these were mistakenly omitted. Close-up shots of the E and F patterns."
+            >
+
+            <img src="../media/projects/pixelart/2023-may-c&c-page3-erika-elston.png"
+            alt="Page 3 of Circuits & Code demo board. Includes parts list and a brief reflection."
+            title="Parts list and a brief reflection from Spring 2023."
+            >
+
+            <br>
+
+        </article>        
+
+        <p class="date">
+            Posted July 6 2024. Last updated August 16 2024.
+        </p>
+    </main>
+
+    <footer>
+        <a href="#">Back to top</a> |
+        <a href="https://github.com/eelston" target="_blank" rel="noreferrer noopener">Github</a> |
+        <a href="https://www.linkedin.com/in/erikacelston/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+    </footer>
+
 </body>
 </html>

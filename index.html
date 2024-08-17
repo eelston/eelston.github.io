@@ -4,77 +4,58 @@
     <meta charset="UTF-8">
     <title>Erika Elston</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
-    <!-- target="_blank" rel="noreferrer noopener" -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
+    <!-- <a href="link" target="_blank" rel="noreferrer noopener">Link Name</a>-->
+    <!-- I want external links to open in new tab but not site nav links, add to links manually -->
 </head>
 
 <body>
-    <nav>
-        <!-- contains set of navigation links -->
-         <div class="navbar">
-            <a href="index.html" id="logo">Erika C. Elston</a>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="directory.html" class="navbar__link" id="projects">projects</a>
-                </li>
-                <!-- <li class="navbar__item">
-                    <a href="something.html" class="navbar__link" id="something">blog</a>
-                </li> -->
-            </ul>
-         </div>
-    </nav>
+    <header>
+        <div class="nav-container">
+            <a id="logo" href="/">Erika Elston</a>
+            <nav>
+                <!-- contains set of navigation links -->
+                <a href="directory.html">projects</a>
+                -
+                <!-- <a href="../blogs.html">blog</a>
+                - -->
+                <a href="links.html">links</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="main">
-        <h3>Hi, I'm Erika.</h3>
-        <p>I am a student at the University of Massachusetts Amherst pursuing a B.S. in Electrical Engineering and a minor in CS.
-            <br>Right now, I am most interested in embedded systems and semiconductor manufacturing. <br>
-            <br>
-        </p>
-
-        <h3>About Me</h3>
+    <main id="page-home">
+        <h1>Hi, I'm Erika.</h1>
         <p>
-            Starting next semester, I will be a Peer Mentor for the UMass Electrical & Computer Engineering department,
-            holding weekly office hours and contributing to planning department-wide events targeted towards other ECE undergrads.
-            <br><br>
+            I am a student at the University of Massachusetts Amherst
+            pursuing a B.S. in Electrical Engineering and a minor in Computer Science.
+            Right now, I am most interested in embedded systems and semiconductor manufacturing.
         </p>
+        
+        <h1>About Me</h1>
+        <p>
+            This fall, I'll be starting as a Peer Mentor for the UMass Electrical & Computer Engineering department,
+            holding weekly office hours and contributing to planning department-wide events targeted towards other ECE undergrads.
+        </p>
+        
             
+        <p>
+            Outside of ECE, I enjoy crochet, music, training BJJ, and eating good food. 
+            <br>My current go-to time-waster is <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank" rel="noreferrer noopener">Vampire Survivors</a>.
+        
+        </p>
 
-            <div class="silly">
-                A few courses I've enjoyed in the past:
-                <ul>
-                    <li>Programming Methodology (JavaScript/TypeScript, programming abstractions, testing, & debugging)</li>
-                    <li>Modern Physics & Materials for Electrical Engineering (E&M and semiconductor materials)</li>
-                    <li>Computational Tools for Electrical Engineering (leveraging MATLAB, Excel)</li>
-                    <li>Intro to Embedded Systems (8-bit and 32-bit MCUs)</li>
-                </ul>
-                <br>
-                Courses I'm excited to take in the future:
-                <ul>
-                    <li>Fundamentals of Semiconductor Devices</li>
-                    <li>Microelectronic Fabrication</li>
-                    <li>Junior Design Project</li>
-                    <li>Intro to VLSI Design</li>
-                    <li>Intro to Software Engineering</li>
-                </ul>
-            </div>
-
-            <p>
-                <br>Outside of ECE, I enjoy training BJJ, listening to music, and eating good food. 
-                <br>My current go-to time-waster is <a href="https://store.steampowered.com/app/1794680/Vampire_Survivors/" target="_blank" rel="noreferrer noopener">Vampire Survivors</a>.
-            </p>
-                       
-            <!-- <br><br> -->
-            <br>
-            <!-- This website is handwritten in HTML!  -->
-
-
-        <div class="links">
+        <footer id="footer-home">
             <a class="resume" href="resume.pdf">Resume</a> |
-            <a href="https://www.linkedin.com/in/erikacelston/" target="_blank" rel="noreferrer noopener">LinkedIn</a> |
-            <a href="https://github.com/eelston/eelston.github.io" target="_blank" rel="noreferrer noopener">Source Code</a>
-        </div>  
-    </div>
-
+                <a href="https://www.linkedin.com/in/erikacelston/" target="_blank" rel="noreferrer noopener">LinkedIn</a> |
+                <a href="https://github.com/eelston/eelston.github.io" target="_blank" rel="noreferrer noopener">Source Code</a>
+        </footer>
+    </main>
       
 </body>
 </html>
