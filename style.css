@@ -68,11 +68,6 @@ header ::selection {
     font-size: 1.25em;
 }
 
-#logo:hover {
-    color: light-dark(black, var(--green1));
-    text-decoration: underline;
-}
-
 nav {
     color: light-dark(black, var(--light1));
 }
@@ -82,8 +77,14 @@ nav a {
     text-decoration: none;
 }
 
-nav a:hover {
+
+#logo:hover, nav a:hover {
     color: light-dark(black, var(--green2));
+    text-decoration: underline;
+}
+
+#logo:hover::selection, nav a:hover::selection {
+    color: light-dark(var(--green6), var(--dark1));
     text-decoration: underline;
 }
 
