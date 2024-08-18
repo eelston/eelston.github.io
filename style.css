@@ -183,6 +183,10 @@ ul {
     font-size: 0.9em;
 }
 
+#page-not-found {
+    text-align: center;
+}
+
 /* footer and footer links */
 footer {
     margin-bottom: 1em;
