@@ -44,10 +44,12 @@ body {
 /* header, navbar */
 header {
     display: flex;
-    background: light-dark(var(--green1), var(--dark1));
+    background: light-dark(var(--green2), var(--dark1));
     height: 3em;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid light-dark(var(--dark1), var(--green2));
+
 }
 
 .nav-container {
@@ -147,7 +149,13 @@ ol.directory {
     list-style-type: none;
 }
 
+ol.directory a.project-name {
+    color: light-dark(var(--green6), var(--green1));
+}
+
 ol.directory li.item {
+    /* border: 1em solid var(--dark3); */
+    /* background: var(--dark3); */
     margin-bottom: 1em;
 }
 
@@ -157,7 +165,7 @@ ol.directory p.date {
 }
 
 ol.directory p.summary {
-
+    margin: 0;
 }
 
 ul {
@@ -175,16 +183,16 @@ ul {
     font-size: 0.9em;
 }
 
-/* footer */
+/* footer and footer links */
 footer {
     margin-bottom: 1em;
     font-size: 0.8em;
     text-align: center;
 }
 
-#footer-home {
-    text-align: left;
-    font-size: 0.9em;
+#home-links a {
+    /* font-size: 0.9em; */
+    color: light-dark(var(--green6), var(--green1));
 }
 
 footer a {
