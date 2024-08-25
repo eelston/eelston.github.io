@@ -166,6 +166,10 @@ ul {
     padding-left: 2em;
 }
 
+.components {
+    margin-bottom: 1em;
+}
+
 .tags {
     font-size: 0.9em;
     color: light-dark(var(--dark4), var(--light3));
