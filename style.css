@@ -64,6 +64,19 @@ header ::selection {
     background-color: light-dark(var(--green5), var(--green1));
 }
 
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.material-symbols-outlined {
+    color: light-dark(black, var(--light1));
+}
+.material-symbols-outlined:hover {
+    color: light-dark(black, var(--green2));
+}
+
 #logo {
     color: light-dark(black, var(--light1));
     font-weight: bold;
@@ -79,7 +92,6 @@ nav a {
     color: light-dark(black, var(--light1));
     text-decoration: none;
 }
-
 
 #logo:hover, nav a:hover {
     color: light-dark(black, var(--green2));
