@@ -70,7 +70,7 @@ header ::selection {
     align-items: end;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined { /* this is svg formatting */
     color: light-dark(black, var(--light1));
 }
 .material-symbols-outlined:hover {
@@ -147,10 +147,13 @@ p {
     font-size: 1.15em;
 }
 
+#page-links ol {
+    list-style: none;
+}
+
 ol.directory {
     list-style-type: none;
 }
-
 
 ol.directory li.item {
     padding: 0.5em 1em 0.8em;
@@ -174,8 +177,9 @@ ol.directory p.summary {
     font-size: 0.85em;
 }
 
-ul {
+ul, ol {
     padding-left: 2em;
+    margin-bottom: 1em;
 }
 
 .components {
@@ -195,6 +199,38 @@ ul {
 
 #page-not-found {
     text-align: center;
+}
+
+/* link behavior */
+main a {
+    color: light-dark(black, var(--light1));
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--green1);
+    text-decoration: underline;
+}
+
+main a:visited {
+    color: light-dark(var(--green6), var(--green1))
+}
+
+#page-links p a {
+    color: light-dark(var(--green6), var(--green1));
+}
+
+#page-links h1 a, h2 a {
+    color: light-dark(black, var(--light1));
+}
+
+#page-links h1 a:hover, h2 a:hover {
+    color: light-dark(var(--green6), var(--green1));
+}
+
+#page-links li a {
+    color: light-dark(var(--green6), var(--green1));
+    text-decoration: none;
 }
 
 /* footer and footer links */
@@ -220,21 +256,6 @@ footer a:hover {
 
 footer a:visited {
     color: light-dark(var(--green6), var(--green1));
-}
-
-/* link behavior */
-main a {
-    color: light-dark(black, var(--light1));
-    text-decoration: none;
-}
-
-main a:hover {
-    color: var(--green1);
-    text-decoration: underline;
-}
-
-main a:visited {
-    color: light-dark(var(--green6), var(--green1))
 }
 
 
