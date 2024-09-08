@@ -145,6 +145,7 @@ p {
 
 #page-project-directory {
     font-size: 1.15em;
+    /* max-width: 750px; */
 }
 
 #page-links ol {
@@ -152,6 +153,7 @@ p {
 }
 
 ol.directory {
+    padding: 0;
     list-style-type: none;
 }
 
