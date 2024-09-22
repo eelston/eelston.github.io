@@ -179,7 +179,7 @@ ol.directory p.summary {
 
 ul, ol {
     padding-left: 2em;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 
 .components {
