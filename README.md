@@ -2,4 +2,5 @@ This website currently serves as a small portfolio, holding a couple projects an
 
 TODO:
 - Fix jittery screen width response
-- Consolidate color palette 
+- Consolidate color palette
+- Fix some CSS redundancies
