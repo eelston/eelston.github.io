@@ -203,6 +203,10 @@ ul, ol {
     text-align: center;
 }
 
+.pdf {
+    width: 100%;
+}
+
 /* link behavior */
 main a {
     color: light-dark(black, var(--light1));
