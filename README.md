@@ -4,3 +4,6 @@ TODO:
 - Fix jittery screen width response
 - Consolidate color palette
 - Fix some CSS redundancies
+- JS?
+- File organization
+- Hover on project directory
