@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TinyTemp / Erika Elston</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    
+    <!-- <a href="link" target="_blank" rel="noreferrer noopener">Link Name</a>-->
+</head>
+
+<body>
+    <header>
+        <div class="nav-container">
+            <a id="logo" href="/">Erika Elston</a>
+            <nav>
+                <!-- contains set of navigation links -->
+                <a href="../projects.html">projects</a>
+                -
+                <!-- <a href="../blogs.html">blog</a>
+                - -->
+                <a href="../links.html">links</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="page-project-writeup">
+        <article>
+            <h1>TinyTemp</h1>
+            <p class="tags">Spring 2025 | ECE 304 | C, KiCAD </p>
+        
+            <strong>Note: this page will be updated with images/figures soon!</strong>
+            <br><br>
+            
+            <p>
+                The TinyTemp is designed to be a small, battery-powered, and programmable embedded system based on ATtiny85 MCU,
+                SSD1306 OLED, and TMP-36 temperature sensor. This project was completed for ECE 304 (Junior Design Project),
+                with the primary goal of gaining experience in PCB design/development and design requirement verification.
+                The following is an abridged version of my project report.
+            </p>
+
+            <h2>
+                Design Requirements
+            </h2>
+            <p>
+                Design requirements for the TinyTemp were defined by a (fictional) customer company.
+                The most significant objectives were as follows:
+            </p>
+
+            <ul class="components">
+                <li>Battery lifetime 2 months</li>
+                <li>Cost less than $15 for parts and PCB (in quantities of 1000)</li>
+                <li>Install on PCB less than 3 square inches</li>
+            </ul>
+
+            <h2>
+                Process & Reflection
+            </h2>
+            <p>
+                The TinyTemp design is an iteration of a previous design project from ECE 231,
+                a breadboard design using the ATmega328p (off of the Arduino Uno). The source code for this 
+                previous version can be found <a href="https://github.com/ProfMcL/megaTemp/blob/main/megaTemp.c" target="_blank" rel="noreferrer noopener">here</a>.
+                A <a href="https://github.com/ProfMcL/tinyOLED/blob/main/tinyOLED.c" target="_blank" rel="noreferrer noopener">library for the OLED</a> was provided,
+                so adapting the source code for the ATtiny85 only involved re-writing a few lines and modifying the number of displayed characters/lines to reduce some current draw.
+            </p>
+
+            <p>
+                This project was my first experience with designing my own PCB. Alas, I made a small mistake in labelling a node.
+                In my schematic, I used "VCC" to denote the +3.3V output from the voltage regulator. However, when testing my PCB,
+                I realized that I mistakenly used “VCC” at the +5V pin in the 6 pin adapter, which negates the purpose of the voltage
+                regulator and would prevent proper functionality if the Pocket Programmer was used for power. I discovered this by probing
+                TP1 with the Pocket Programmer connected through the adapter.
+            </p>
+
+            <p>
+                Luckily, this was not detrimental and more of a learning experience, as the TinyTemp is meant to operate without the programmer, i.e., everything works as intended
+                after flashing the code through the adapter, removing the programmer, and connecting power supply to the Vin1 header pins for +5V.
+            </p>
+
+            <p>
+                My assembled PCB met each specified design requirement, except for battery life.
+                My final device current draw resulted in a battery lifetime approximately 0.03 months off from the threshold requirement
+                (or, approximately 0.03 milliamps from the maximum current draw to achieve the specification).
+                While I implemented a watchdog timer and limited my OLED output text to 1-2 lines to reduce current draw,
+                further optimization could be achieved by implementing a function to reduce the OLED brightness
+                (similar to OLED_SetBrightness() found in the SSD1306.c library) and further reducing displayed character count. 
+            </p>
+
+            <p>
+                I believe this project could be deemed generally successful;
+                the PCB design, embedded C programming, debugging, and design verification
+                processes—along with the mistakes made along the way—provided an overall educational and fulfilling experience.
+            </p>
+        </article>        
+
+        <p class="date">
+            Posted July 2 2025. Last updated July 2 2025.
+        </p>
+    </main>
+
+    <footer>
+        <a href="#">Back to top</a> |
+        <a href="https://github.com/eelston" target="_blank" rel="noreferrer noopener">Github</a> |
+        <a href="https://www.linkedin.com/in/erikacelston/" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+    </footer>
+
+</body>
+</html>
